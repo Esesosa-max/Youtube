@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: hsl(214, 47%, 23%);
+  color: #fff;
+  overflow-x: hidden;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* min-height: 100vh; */
+}
+* {
+  /* overflow-x: hidden; */
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.header_display {
+  margin: 0 auto;
+}
+
+.h_flex {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  border-radius: 20px;
+  /* justify-content: center;
+  ma
+  */
+  margin: 0 auto;
+  border: 3px solid hsl(217, 16%, 45%);
+}
+.choice-el {
+  border: none;
+  outline: none;
+  margin: 30px;
+}
+.game {
+  display: flex;
+  justify-content: center;
+  /* background: url("./images/bg-pentagon.svg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.choice-el:nth-child(3) {
+  border-radius: 50%;
+  box-shadow: 1px -1px 0px 12px hsl(39, 89%, 49%) inset;
+  position: absolute;
+  top: -60px;
+  /* left: 56%; */
+}
+.choice-el:nth-child(4) {
+  border-radius: 50%;
+  box-shadow: 1px -1px 0px 12px hsl(261, 72%, 63%) inset;
+  position: absolute;
+  top: 260px;
+  right: 50%;
+}
+.choice-el:nth-child(5) {
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  right: 56%;
+  box-shadow: 1px -1px 0px 12px hsl(189, 58%, 57%) inset;
+}
+.choice-el img {
+  padding: 43px;
+}
+.choice-el:nth-child(2) {
+  box-shadow: 1px -1px 0px 12px hsl(230, 89%, 65%) inset;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 56%;
+  /* border: 2px solid; */
+}
+.choice-el:nth-child(1) {
+  border-radius: 50%;
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  box-shadow: 1px -1px 0px 12px hsl(349, 70%, 56%) inset;
+}
+.result {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.result > * {
+  margin: 20px;
+}
+.paper {
+  box-shadow: 1px -1px 0px 12px hsl(230, 89%, 65%) inset;
+}
+.rock {
+  box-shadow: 1px -1px 0px 12px hsl(349, 70%, 56%) inset;
+}
+.scissors {
+  box-shadow: 1px -1px 0px 12px hsl(39, 89%, 49%) inset;
+}
+.lizard {
+  box-shadow: 1px -1px 0px 12px hsl(261, 72%, 63%) inset;
+}
+.spock {
+  box-shadow: 1px -1px 0px 12px hsl(189, 58%, 57%) inset;
+}
+
+.layou img {
+  width: 400px;
+}
+.position {
+  margin: 60px;
+  position: relative;
+}
+.layou {
+  display: flex;
+  justify-content: center;
+}
+.result-el {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 30px;
+}
+.result-el img {
+  padding: 53px;
+}
+.rules {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 25px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid hsl(217, 16%, 45%);
+  outline: none;
+  background: transparent;
+}
+.center button {
+  padding: 10px 25px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid hsl(217, 16%, 45%);
+  outline: none;
+  background: transparent;
+}
+.modal img {
+  width: 100%;
+  text-align: center;
+}
+
+.__display {
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .modal {
+    width: 340px;
+  }
+  .h_flex {
+    width: 400px;
+  }
+  .choice-el {
+    transform: scale(0.7);
+  }
+  .choice-el:nth-child(1) {
+    top: 200px;
+  }
+  .choice-el:nth-child(2) {
+    top: 40px;
+    left: 66%;
+  }
+  .choice-el:nth-child(3) {
+  }
+  .choice-el:nth-child(4) {
+    top: 200px;
+  }
+  .choice-el:nth-child(5) {
+    top: 40px;
+    right: 62%;
+  }
+  .result {
+    flex-direction: row;
+  }
+
+  .computer,
+  .user {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+  .computer button,
+  .user button {
+    transform: scale(0.7);
+  }
+  .computer h1,
+  .user h1 {
+    font-size: 15px;
+  }
+  .center {
+    position: absolute;
+    bottom: 120px;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .center h1 {
+    font-size: 60px;
+    width: 400px;
+    text-align: center;
+  }
+  .center button {
+    margin: 0 auto;
+  }
+}
